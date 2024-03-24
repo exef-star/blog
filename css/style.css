@@ -1,0 +1,278 @@
+.nav{
+    width: 100%;
+      /* 一般来说这里的详细尺寸, 都是设计稿中已经标注清楚的了. 此处没设计稿, 具体的尺寸取决于我自己的喜好 */
+    height: 50px;
+    background-color: rgba(255, 255, 255,);
+    color: black;
+     /* 导航栏内部的内容, 都是一行排列的. 就需要使用 flex 布局来进行操作 */
+    display: flex;
+      /* 实现子元素垂直居中效果 */
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+
+.nav img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    margin-left: 30px;
+    margin-right: 10px;
+}
+
+.nav .spacer{
+      /* 相对于父元素的宽度, 如果父元素(.nav) 宽度是 1000px, 此时 .spacer 就是 700px */
+    width: 40%;
+}
+
+.nav a{
+    color: black;
+    text-decoration: none;
+    padding: 0 10px
+}
+
+.aaa{
+    height: 150px;
+    width: 100%;
+}
+
+html, body{
+    height: 100%;
+}
+
+body {
+    font-weight: lighter;
+    background-image: url(https://pic.imgdb.cn/item/65fe6aad9f345e8d03a93395.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+.typed{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+}
+
+.typed1{
+    height: 250px;
+    width: 100%;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  /* 滚动条的滑块 */
+  ::-webkit-scrollbar-thumb {
+    background-color: #a1a3a9;
+    border-radius: 20px;
+  }
+  ::-webkit-scrollbar-track{
+    background-color: rgba(255, 255, 255,1);
+    border-radius: 20px;
+  }
+
+  .container{
+    /* 当前版心并不是和窗口一样宽的 */
+    width: auto;
+    height: auto;
+
+    /* 水平居中 */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .left{
+    height: 100%;
+    width: 200px;
+}
+
+.container .right{
+    height: auto; 
+    width: 100%;
+    background-color: rgba(255,255,255); 
+    border-radius: 10px;
+    border-radius: 20px;
+    overflow: auto;
+    padding: 10px;
+} 
+
+
+/* 接下来实现card部分样式 */
+.card{
+    background-color: rgba(255,255,255);
+    border-radius: 10px;
+
+    /* 通过这里的内边距，就可以头像居中 */
+    /* 这里设置的30px，意思就是四个方向都是30px */
+    padding: 30px;
+}
+
+.card img{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+
+.card h3{
+    text-align: center;
+    padding: 10px;
+}
+
+a{
+    color: rgb(0, 133, 186);
+    text-decoration: none;
+    padding: 0 10px
+}
+
+#menus {
+    width: 140px;
+    padding: 3px 5px;
+    background-color: #ffffff;
+    display: none;
+    /* display: flex; */
+    flex-wrap: wrap;
+    border: 1px solid #dadce0;
+    border-radius: 2px;
+    box-shadow: 1px 1px 2px #878787;
+    position: fixed;
+    user-select: none;
+  }
+  #menus div {
+    display: flex;
+    align-items: center;
+    margin: 2px 0px;
+    cursor: pointer;
+    width: 100%;
+    min-height: 26px;
+    padding: 0px 8px;
+    font-size: 14px;
+  }
+  #menus div:hover {
+    background-color: #e8e8e9;
+  }
+
+footer {
+    padding: 10px;
+    width: calc(100% - 20px);
+    min-height: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 60px 0 20px;
+}
+
+.blacka{
+    color: #000;
+}
+
+.bigimg{
+	text-align: center; /*让div内部文字居中*/
+	margin: 50px 500px 10px;
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+}
+
+h1{
+    font-weight: lighter;
+}
+h2{
+    font-weight: lighter;
+}
+h3{
+    font-weight: lighter;
+}
+h4{
+    font-weight: lighter;
+}
+h5{
+    font-weight: lighter;
+}
+h6{
+    font-weight: lighter;
+}
+
+.blog{
+    padding: 3rem;
+}
+
+#code_block {
+    background: #2d2d2d;
+    color: rgb(201,209,217);
+    font-family: Consolas;
+    text-align: left;
+    padding: 1em;
+    padding-left: 0.8em;
+    margin: 1em;
+    border-radius: 5px;
+    counter-reset: line;
+    white-space: normal;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    width: calc(100% - 63px);
+    overflow-x: auto;
+}
+
+#code_block code {
+    font-family: Consolas;
+}
+
+#code_block .key_word,
+#code_block .operator,
+#code_block .united {
+    color: rgb(255,123,114);
+}
+#code_block .value,
+#code_block .default_function_name,
+#code_block .attribute {
+    color: rgb(121,192,255);
+}
+#code_block .note {
+    color: rgb(139,148,158);
+}
+#code_block .created_function_name {
+    color: rgb(210,168,255);
+}
+#code_block .class_name {
+    color: rgb(247,162,87);
+}
+#code_block .string {
+    color: rgb(165,214,255);
+}
+#code_block .tag {
+    color: #7EE787;
+}
+#code_block .href_link {
+    color: rgb(165,214,255);
+    border-bottom: 2px solid rgb(165,214,255);
+}
+
+#code_block span {
+    display: block;
+    line-height: 1.5rem;
+    white-space: pre;
+}
+
+#code_block span:before {
+    counter-increment: line;
+    content: counter(line);
+    display: inline-block;
+    width: 3em;
+    text-align: right;
+    border-right: 2px solid #999;
+    padding-right: .8em;
+    margin-right: 1em;
+    color: #999;
+}

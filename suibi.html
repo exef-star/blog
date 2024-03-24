@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>随笔</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+        <link rel="icon" href="https://pic.imgdb.cn/item/65fe67989f345e8d03923ea6.jpg" sizes="16x16">
+    </head>
+    <body>
+        <div class="nav">
+            <img src="https://pic.imgdb.cn/item/65fe67989f345e8d03923ea6.jpg">
+            <span><ion-icon name="planet-outline"></ion-icon>可执行程序的博客</span>
+            <!-- 空白元素 实现占位 -->
+            <div class="spacer"></div>
+            <a href="index.html"><ion-icon name="home-outline"></ion-icon>主页</a>
+            <a href="Personal Profile.html"><ion-icon name="person-outline"></ion-icon>个人简介</a>
+            <a href="suibi.html"><ion-icon name="clipboard-outline"></ion-icon>随笔</a>
+            <a href="https://github.com/exef-star/textblog"><ion-icon name="logo-github"></ion-icon>Github</a>
+            <a href="javascript:location.reload()"><ion-icon name="reload-outline"></ion-icon>重新加载</a>
+        </div>
+        <div class="aaa"></div>
+        <p style="font-size: 60px;" align="center">随笔</p>
+        <div class="typed">
+            <span id="typed" style="white-space: pre-wrap;line-height: 30px;"></span>
+        </div>
+        <div class="typed1"></div>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+        <script>
+                const options = {
+        strings: [
+        '恰同学少年，风华正茂；书生意气，挥斥方遒。——毛泽东',
+        '世上本没有路，走的人多了便有了路。——鲁迅',
+        '一个人的成就，尤其是有特殊成就的，大多是自由发展出来的，一个学校也正如此。——傅斯年',
+        '我是个平常的人，我不能盼望在人海中值得你一转眼的注意。——徐志摩',
+        '走好选择的路，别选择好走的路，你才能拥有真正的自己。——杨绛',
+        '人生不过如此，且行且珍惜。自己永远是自己的主角，不要总在别人的戏剧里充当看配角。——林语堂',
+        '雨下给富人，也下给穷人；下给义人，也下给不义的人。其实，雨并不公道，因为下落在一个没有公道的世界上。——老舍',
+        '最著名之一，Minecraft中没有bug，只有特性！',
+        ],
+        typeSpeed: 70, // 打印速度
+        startDelay: 300, // 开始之前的延迟300毫秒
+        loop: false, // 是否循环
+        };
+
+        const typed = new Typed('#typed', options);
+        </script>
+
+<div class="container">
+    <div class="right">
+        <h2>2024年3月24日</h2>
+        <p>🥳此博客正式开工！！！</p>
+    </div>
+</div>
+<footer>
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg">
+    <img src="https://img.shields.io/badge/https%3A%2F%2Fgithub.com%2Fexef-star%2Ftextblog?logo=Github&logoColor=%234d4d4d&label=%E5%9C%B0%E5%9D%80&labelColor=%23ffffff&color=%2360c5df&cacheSeconds=%E5%95%8A%E5%95%8A%E5%95%8A%E5%95%8A%E5%95%8A%E5%95%8A">
+    <img src="https://img.shields.io/badge/https%3A%2F%2Fgithub.com%2Fexef-star%2Ftextblog%2Fblob%2Fmain%2FLICENSE?logo=Github&logoColor=%234d4d4d&label=MIT&labelColor=%23ffffff&color=%23f27b2c&cacheSeconds=%E5%95%8A%E5%95%8A%E5%95%8A%E5%95%8A%E5%95%8A%E5%95%8A">
+    <img src="https://img.shields.io/badge/https%3A%2F%2Fgithub.com%2Fionic-team%2Fionicons?logo=Github&logoColor=%234d4d4d&label=%E5%AD%97%E4%BD%93%E5%9B%BE%E6%A0%87%E5%9C%B0%E5%9D%80&labelColor=%23ffffff&color=%23f27b2c&cacheSeconds=%E5%95%8A%E5%95%8A%E5%95%8A%E5%95%8A%E5%95%8A%E5%95%8A">
+    <p>Copyright © 2022-2024 hanta blog 感谢<a href="https://www.superbed.cn/">聚合图床</a> | Typed.js | <a href="https://ionic.io/ionicons">Ionicons</a> | <a href="https://www.jsdelivr.com/">jsdelivr</a>的图床，打字机，字体图标，CDN</p>
+</footer>
+
+<script>
+    function clickEffect() {
+        let balls = [];
+        let longPressed = false;
+        let longPress;
+        let multiplier = 0;
+        let width, height;
+        let origin;
+        let normal;
+        let ctx;
+        const colours = ["#F73859", "#14FFEC", "#00E0FF", "#FF99FE", "#FAF15D"];
+        const canvas = document.createElement("canvas");
+        document.body.appendChild(canvas);
+        canvas.setAttribute("style", "width: 100%; height: 100%; top: 0; left: 0; z-index: 99999; position: fixed; pointer-events: none;");
+        const pointer = document.createElement("span");
+        pointer.classList.add("pointer");
+        document.body.appendChild(pointer);
+ 
+        if (canvas.getContext && window.addEventListener) {
+            ctx = canvas.getContext("2d");
+            updateSize();
+            window.addEventListener('resize', updateSize, false);
+            loop();
+            window.addEventListener("mousedown", function(e) {
+                pushBalls(randBetween(10, 20), e.clientX, e.clientY);
+                document.body.classList.add("is-pressed");
+                longPress = setTimeout(function(){
+                    document.body.classList.add("is-longpress");
+                    longPressed = true;
+                }, 500);
+            }, false);
+            window.addEventListener("mouseup", function(e) {
+                clearInterval(longPress);
+                if (longPressed == true) {
+                    document.body.classList.remove("is-longpress");
+                    pushBalls(randBetween(50 + Math.ceil(multiplier), 100 + Math.ceil(multiplier)), e.clientX, e.clientY);
+                    longPressed = false;
+                }
+                document.body.classList.remove("is-pressed");
+            }, false);
+            window.addEventListener("mousemove", function(e) {
+                let x = e.clientX;
+                let y = e.clientY;
+                pointer.style.top = y + "px";
+                pointer.style.left = x + "px";
+            }, false);
+        } else {
+            console.log("canvas or addEventListener is unsupported!");
+        }
+ 
+ 
+        function updateSize() {
+            canvas.width = window.innerWidth * 2;
+            canvas.height = window.innerHeight * 2;
+            canvas.style.width = window.innerWidth + 'px';
+            canvas.style.height = window.innerHeight + 'px';
+            ctx.scale(2, 2);
+            width = (canvas.width = window.innerWidth);
+            height = (canvas.height = window.innerHeight);
+            origin = {
+                x: width / 2,
+                y: height / 2
+            };
+            normal = {
+                x: width / 2,
+                y: height / 2
+            };
+        }
+        class Ball {
+            constructor(x = origin.x, y = origin.y) {
+                this.x = x;
+                this.y = y;
+                this.angle = Math.PI * 2 * Math.random();
+                if (longPressed == true) {
+                    this.multiplier = randBetween(14 + multiplier, 15 + multiplier);
+                } else {
+                    this.multiplier = randBetween(6, 12);
+                }
+                this.vx = (this.multiplier + Math.random() * 0.5) * Math.cos(this.angle);
+                this.vy = (this.multiplier + Math.random() * 0.5) * Math.sin(this.angle);
+                this.r = randBetween(8, 12) + 3 * Math.random();
+                this.color = colours[Math.floor(Math.random() * colours.length)];
+            }
+            update() {
+                this.x += this.vx - normal.x;
+                this.y += this.vy - normal.y;
+                normal.x = -2 / window.innerWidth * Math.sin(this.angle);
+                normal.y = -2 / window.innerHeight * Math.cos(this.angle);
+                this.r -= 0.3;
+                this.vx *= 0.9;
+                this.vy *= 0.9;
+            }
+        }
+ 
+        function pushBalls(count = 1, x = origin.x, y = origin.y) {
+            for (let i = 0; i < count; i++) {
+                balls.push(new Ball(x, y));
+            }
+        }
+ 
+        function randBetween(min, max) {
+            return Math.floor(Math.random() * max) + min;
+        }
+ 
+        function loop() {
+            ctx.fillStyle = "rgba(255, 255, 255, 0)";
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let i = 0; i < balls.length; i++) {
+                let b = balls[i];
+                if (b.r < 0) continue;
+                ctx.fillStyle = b.color;
+                ctx.beginPath();
+                ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2, false);
+                ctx.fill();
+                b.update();
+            }
+            if (longPressed == true) {
+                multiplier += 0.2;
+            } else if (!longPressed && multiplier >= 0) {
+                multiplier -= 0.4;
+            }
+            removeBall();
+            requestAnimationFrame(loop);
+        }
+ 
+        function removeBall() {
+            for (let i = 0; i < balls.length; i++) {
+                let b = balls[i];
+                if (b.x + b.r < 0 || b.x - b.r > width || b.y + b.r < 0 || b.y - b.r > height || b.r < 0) {
+                    balls.splice(i, 1);
+                }
+            }
+        }
+    }
+    clickEffect();//调用特效函数
+</script>
+
+<div id="menus">
+    <div data-id="a"><a href="index.html"><ion-icon name="home-outline"></ion-icon>主页</a></div>
+    <div data-id="b"><ion-icon name="logo-github"></ion-icon><a href="https://github.com/exef-star/textblog">Github</a></div>
+
+</div>
+<script>
+    const menus = document.getElementById("menus");
+      menus.addEventListener("click", (e) => {
+        e.stopPropagation()
+      });
+      menus.addEventListener("contextmenu", (e) => { // 菜单要阻止默认事件冒泡
+        e.stopPropagation()
+        e.preventDefault();
+      });
+      document.addEventListener("contextmenu", (e) => {
+        console.log(e, "全局鼠标右键事件");
+        e.preventDefault();
+        showMenu(e);
+      });
+      document.addEventListener("click", hideMenu, false); // 隐藏菜单
+      function showMenu(e) {
+        menus.style.top = `${e.clientY}px`;
+        menus.style.left = `${e.clientX}px`;
+        menus.style.display = "flex";
+      }
+      function hideMenu() {
+        menus.style.display = "none";
+      }
+      const menusChild = document.querySelectorAll("#menus div");
+      menusChild.forEach(item => {
+        item.onclick = (e)=>{
+          console.log(e.target.dataset.id, '元素');
+          hideMenu()
+        }
+      });
+</script>
+
+    </body>
+</html>
