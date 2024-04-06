@@ -71,8 +71,22 @@
         <div class="card">
             <img src="https://pic.imgdb.cn/item/65fe67989f345e8d03923ea6.jpg">
             <p>🥳欢迎来到可执行程序的博客</p>
-            <div id="ww_14550e66dc81b" v='1.3' loc='auto' a='{"t":"horizontal","lang":"zh","sl_lpl":1,"ids":[],"font":"Arial","sl_ics":"one_a","sl_sot":"fahrenheit","cl_bkg":"#FFFFFF00","cl_font":"#000000","cl_cloud":"#d4d4d4","cl_persp":"#2196F3","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'><a href="https://weatherwidget.org/zh/" id="ww_14550e66dc81b_u" target="_blank">天气插件</a></div><script async src="https://app2.weatherwidget.org/js/?id=ww_14550e66dc81b"></script>
-            
+            <form action="https://www.bing.com/search" method="get" target="_blank">
+                <input type="text" name="q" placeholder="请教Bing娘" class="bing">
+                <input type="submit" value="开始请教" class="bing">
+            </form>
+            <style>
+            .bing{
+            width: 114%;
+            background-color: #fff;
+            border: 0px;
+            }
+            .bing::after{
+            border: #fff;
+            }
+            </style>
+            <hr>
+            <iframe src="newinfo.html" width="100%" height="100%" frameborder="0" scrolling="no" onload="this.height=frame1.document.body.scrollHeight"></iframe>
         </div>
     </div>
 </div>
