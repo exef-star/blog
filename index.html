@@ -2,13 +2,27 @@
 <html>
     <head>
         <title>欢迎来到可执行程序的博客</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
         <link rel="icon" href="https://pic.imgdb.cn/item/65fe67989f345e8d03923ea6.jpg" sizes="16x16">
+        <!--2024年4月13日11:29:14-->
+        <style>
+            #progress-bar {
+              position: fixed;
+              top: 0;
+              left: 0;
+              height: 2px;
+              width: 0;
+              background-color: #6abeff;
+              transition: width 0.4s;
+            }
+         </style>
     </head>
     <body>
+        <div id="progress-bar"></div>
         <div class="nav">
             <img src="https://pic.imgdb.cn/item/65fe67989f345e8d03923ea6.jpg">
             <span><ion-icon name="planet-outline"></ion-icon>可执行程序的博客</span>
@@ -71,22 +85,27 @@
         <div class="card">
             <img src="https://pic.imgdb.cn/item/65fe67989f345e8d03923ea6.jpg">
             <p>🥳欢迎来到可执行程序的博客</p>
-            <form action="https://www.bing.com/search" method="get" target="_blank">
-                <input type="text" name="q" placeholder="请教Bing娘" class="bing">
-                <input type="submit" value="开始请教" class="bing">
-            </form>
-            <style>
-            .bing{
-            width: 114%;
-            background-color: #fff;
-            border: 0px;
-            }
-            .bing::after{
-            border: #fff;
-            }
-            </style>
+            <hr>
+            <h3>公告</h3>
+            <a href="suibi.html">关于Blog推倒重来这件事·  ·  ·</a>
             <hr>
             <iframe src="newinfo.html" width="100%" height="100%" frameborder="0" scrolling="no" onload="this.height=frame1.document.body.scrollHeight"></iframe>
+            <hr>
+            <h3><ion-icon name="link-outline"></ion-icon>友链</h3>
+            <table><tr>
+                <img src="https://pic.imgdb.cn/item/6619cb6b68eb93571382d76f.jpg" style="border-radius: 100%; width: 33%; height: 33%;" style="CURSOR: pointer" onclick='window.open("https://www.yt-blog.top/")'>
+                <img src="https://pic.imgdb.cn/item/6619ef2368eb935713b6aed9.png" style="border-radius: 100%; width: 33%; height: 33%;" style="CURSOR: pointer" onclick='window.open("https://www.fomal.cc/")'>
+                <img src="https://pic.imgdb.cn/item/6619f78c68eb935713c68821.png" style="border-radius: 100%; width: 33%; height: 33%;" style="CURSOR: pointer" onclick='window.open("https://www.chwin.asia/")'>
+                <img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg" style="border-radius: 100%; width: 33%; height: 33%;" style="CURSOR: pointer" onclick='window.open("https://colsrch.cn/")'>
+                <img src="https://www.yuanzj.top/img/favicon.jpg" style="border-radius: 100%; width: 33%; height: 33%;" style="CURSOR: pointer" onclick='window.open("https://www.yuanzj.top/")'>
+                <img src="https://blog.beacox.space/img/avatar.png" style="border-radius: 100%; width: 33%; height: 33%;" style="CURSOR: pointer" onclick='window.open("https://blog.beacox.space/")'>
+                <img src="https://upyun.thatcdn.cn/hexo/stellar/image/favicon.webp" style="border-radius: 100%; width: 33%; height: 33%;" style="CURSOR: pointer" onclick='window.open("https://blog.thatcoder.cn/")'>
+                <img src="https://cdn1.tianli0.top/npm/chuckle-js-css/chuckle/head.webp" style="border-radius: 100%; width: 33%; height: 33%;" style="CURSOR: pointer" onclick='window.open("https://www.qcqx.cn/")'>
+                <img src="https://i1-cdn.feizhuqwq.com/img-assets/logo/faviconHD.jpg" style="border-radius: 100%; width: 33%; height: 33%;" style="CURSOR: pointer" onclick='window.open("https://blog.feizhuqwq.com/")'>
+                <img src="https://bu.dusays.com/2023/12/23/65867c3357bb6.jpg" style="border-radius: 100%; width: 33%; height: 33%;" style="CURSOR: pointer" onclick='window.open("https://kegongteng.cn/")'>
+                <img src="https://i0.hdslb.com/bfs/article/67d63eebed15d818e62c17db4fbe5c98f65067c1.png@1256w_1256h_!web-article-pic.avif" style="border-radius: 100%; width: 33%; height: 33%;" style="CURSOR: pointer" onclick='window.open("https://space.bilibili.com/686127?spm_id_from=333.1369.opus.module_author_avatar.click")'>
+                <img src="https://gukaifeng.cn/img/avatar.webp" style="border-radius: 100%; width: 33%; height: 33%;" style="CURSOR: pointer" onclick='window.open("https://gukaifeng.cn/")'>
+            </tr></table>
         </div>
     </div>
 </div>
