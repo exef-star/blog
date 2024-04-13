@@ -2,6 +2,7 @@
 ## 🎉🎉🥳🎄🏮欢迎来到可执行程序的博客🏮🎄🥳🎉🎉
 ## 🥳欢迎来到可执行程序的新博客
 ### 🤗这是我的个人博客，可供大家学习使用
+[演示链接](https://exef-star.github.io/blog/)
 
 --------------
 ### 面板详情
@@ -14,13 +15,21 @@
 ![github](https://img.shields.io/codecov/c/github/vuejs/vue/dev.svg)
 ---------------
 ### 图片展示
-![image](https://pic.imgdb.cn/item/661143ef68eb9357133e7c27.png)
-![image](https://pic.imgdb.cn/item/6611443568eb9357133ecdc7.png)
+![image](https://cdn.jsdelivr.net/gh/exef-star/blog@main/img/README.md/2024-04-13%20195430.png)
+![image](https://cdn.jsdelivr.net/gh/exef-star/blog@main/img/README.md/2024-04-13%20195500.png)
 #### 什么是博客？
 
 博客是网站的一种形式，它的内容是以时间轴的形式倒序展示的（即最新的内容出现在第一个位置）。
 
 博客通常是由个人或者一小撮人运营的，以对话的形式呈现信息。不过，现在也有很多大公司使用博客来对外发布信息和观点。
+
+#### 新博客的特点
+
+- 纯手搓的博客，80%都是自己做的（目前不支持移动端）
+- 升级了右侧公告栏
+- 使用了新的图床（CDN没变，因为jsDelivr里面就有CloudFlare的100多个节点）
+- 将字体改变成了细体（Chrome中才生效）
+- ···
 
 ##### 建造这个博客的目的：
 
@@ -37,3 +46,5 @@ lonicon
 JSDilivr
 
 typed.js
+
+Font Awesome
